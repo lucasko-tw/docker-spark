@@ -1,9 +1,9 @@
 ##Quick Start
 
 ```SH
-docker pull lucasko/spark:1.0
+docker pull lucasko/spark:latest
 
-docker run -v $PWD:/spark -it lucasko/spark:1.0  python SparkEgine.py
+docker run -v $PWD:/spark -it lucasko/spark:latest  python SparkEgine.py
 ```
 
 
