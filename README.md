@@ -1,7 +1,7 @@
 ##Quick Start
 
 ```SH
-docker pull lucasko/spark
+docker pull lucasko/spark:1.0
 
 docker run -v $PWD:/spark -it lucasko/spark:1.0  python SparkEgine.py
 ```
@@ -29,7 +29,7 @@ RUN \
   apt-get install -y byobu curl git htop man unzip nano wget vim libmysqlclient-dev  && \
   rm -rf /var/lib/apt/lists/*
 
-#Installation lib for common project
+#Install lib for common project
 RUN pip install py4j elasticsearch MySQL-python numpy
 
 
@@ -59,6 +59,5 @@ Row(user=0, item=2, prediction=-0.13807)
 Row(user=1, item=0, prediction=2.62584)
 Row(user=2, item=0, prediction=-1.50184)
 [[0, 2, -0.13807], [1, 0, 2.62584], [2, 0, -1.50184]]
-
 ```
 
