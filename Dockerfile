@@ -15,12 +15,9 @@ RUN \
   apt-get -y upgrade && \
   apt-get install -y build-essential && \
   apt-get install -y software-properties-common && \
-  apt-get install -y byobu curl git htop man unzip nano wget vim libmysqlclient-dev  py4j elasticsearch MySQL-python numpy   && \
-  rm -rf /var/lib/apt/lists/*
-
-# Install Project Package
-#RUN pip install py4j elasticsearch MySQL-python numpy
-
+  apt-get install -y byobu curl git htop man unzip nano wget vim libmysqlclient-dev && \
+  rm -rf /var/lib/apt/lists/* && \
+  pip install py4j elasticsearch MySQL-python numpy
 
 
 ENV SPARK_VERSION spark-2.0.2-bin-hadoop2.7
