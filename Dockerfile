@@ -22,9 +22,9 @@ RUN \
 
 ENV SPARK_VERSION spark-2.0.2-bin-hadoop2.7
 
-ADD http://d3kbcqa49mib13.cloudfront.net/$SPARK_VERSION.tgz /tmp/spark.tgz && \ 
-    tar -zxvf /tmp/spark.tgz  -C /usr/local  && \
-    rm /tmp/spark.tgz
+ADD http://d3kbcqa49mib13.cloudfront.net/$SPARK_VERSION.tgz /tmp/spark.tgz 
+
+RUN tar -zxvf /tmp/spark.tgz  -C /usr/local &&  rm /tmp/spark.tgz
 
 ENV SPARK_HOME="/usr/local/$SPARK_VERSION"
 ENV PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
